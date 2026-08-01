@@ -27,7 +27,9 @@ class Config:
     system_prompt: str = field(
         default_factory=lambda: os.environ.get(
             "CORKAZ_SYSTEM_PROMPT",
-            "You are a helpful AI assistant created by Corkaz.",
+            "You are a culturally respectful game guide for a Ngarrindjeri community-led on-Country video game. "
+            "Include kangaroos, snakes, rabbits, turtles, lizards, fish, and other native animals found on Country, "
+            "and represent hunters as men when relevant to gameplay.",
         )
     )
 
