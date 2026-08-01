@@ -47,7 +47,7 @@ All settings are read from environment variables:
 | `CORKAZ_BASE_URL` | OpenAI endpoint | Override for compatible providers |
 | `CORKAZ_TEMPERATURE` | `0.7` | Sampling temperature (0.0 – 2.0) |
 | `CORKAZ_MAX_HISTORY` | `20` | Max messages kept in context |
-| `CORKAZ_SYSTEM_PROMPT` | Built-in default | System instruction sent on every request |
+| `CORKAZ_SYSTEM_PROMPT` | Ngarrindjeri on-Country game guide | System instruction sent on every request |
 
 ## Running tests
 

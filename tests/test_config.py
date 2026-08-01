@@ -21,6 +21,19 @@ def test_default_max_history():
     assert cfg.max_history == 20
 
 
+def test_default_system_prompt_contains_country_animals():
+    cfg = Config()
+    prompt = cfg.system_prompt.lower()
+    assert "ngarrindjeri" in prompt
+    assert "kangaroos" in prompt
+    assert "snakes" in prompt
+    assert "rabbits" in prompt
+    assert "turtles" in prompt
+    assert "lizards" in prompt
+    assert "fish" in prompt
+    assert "hunters as men" in prompt
+
+
 def test_env_override(monkeypatch):
     monkeypatch.setenv("CORKAZ_MODEL", "gpt-4o")
     monkeypatch.setenv("CORKAZ_TEMPERATURE", "1.0")
