@@ -1,14 +1,16 @@
 # Corkaz
 
-A first-nation AI chat application built on top of the OpenAI API (or any compatible endpoint).
+A community-led engagement and social-life app for Melissa and Natasha, with AI support built on top of the OpenAI API (or any compatible endpoint).
 
 ---
 
 ## Features
 
 - Interactive streaming chat loop via the command line
+- Built-in community activity logging for Melissa and Natasha
+- Engagement and wellbeing scoring summaries
+- JSON-backed local record storage
 - Configurable model, temperature, and conversation-history window
-- Clean Python package layout ready for extension
 
 ## Requirements
 
@@ -35,6 +37,9 @@ Type your message and press **Enter**. Special commands:
 |---------|--------|
 | `reset` | Clear conversation history |
 | `quit` / `exit` | Exit the app |
+| `log Lead\|Activity\|Social Focus\|Wellbeing\|Engagement\|Notes` | Save an engagement/social record |
+| `list [Melissa\|Natasha]` | List records for one lead or both |
+| `summary [Melissa\|Natasha]` | Show average wellbeing/engagement scores |
 
 ## Configuration
 
@@ -47,7 +52,8 @@ All settings are read from environment variables:
 | `CORKAZ_BASE_URL` | OpenAI endpoint | Override for compatible providers |
 | `CORKAZ_TEMPERATURE` | `0.7` | Sampling temperature (0.0 – 2.0) |
 | `CORKAZ_MAX_HISTORY` | `20` | Max messages kept in context |
-| `CORKAZ_SYSTEM_PROMPT` | Ngarrindjeri on-Country game guide | System instruction sent on every request |
+| `CORKAZ_SYSTEM_PROMPT` | Melissa/Natasha engagement assistant | System instruction sent on every request |
+| `CORKAZ_ENGAGEMENT_DATA_PATH` | `~/.corkaz/community_engagement.json` | File path for engagement records |
 
 ## Running tests
 

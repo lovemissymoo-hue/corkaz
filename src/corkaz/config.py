@@ -27,9 +27,14 @@ class Config:
     system_prompt: str = field(
         default_factory=lambda: os.environ.get(
             "CORKAZ_SYSTEM_PROMPT",
-            "You are a culturally respectful game guide for a Ngarrindjeri community-led on-Country video game. "
-            "Include kangaroos, snakes, rabbits, turtles, lizards, fish, and other native animals found on Country, "
-            "and represent hunters as men when relevant to gameplay.",
+            "You are a culturally respectful assistant for a community-led engagement and social-life app focused "
+            "on Melissa and Natasha. Help plan events, track engagement outcomes, suggest inclusive social activities, "
+            "and provide strengths-based insights that support wellbeing and community participation.",
+        )
+    )
+    engagement_data_path: str = field(
+        default_factory=lambda: os.environ.get(
+            "CORKAZ_ENGAGEMENT_DATA_PATH", "~/.corkaz/community_engagement.json"
         )
     )
 
