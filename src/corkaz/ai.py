@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Generator, List
+from typing import Generator, List, Optional
 
 from .config import Config
 
@@ -98,7 +98,7 @@ class AIClient:
 class CorkAI:
     """High-level interface that ties together config, history, and the AI client."""
 
-    def __init__(self, config: Config | None = None) -> None:
+    def __init__(self, config: Optional[Config] = None) -> None:
         self.config = config or Config()
         self.history = ConversationHistory(max_history=self.config.max_history)
         self._client = AIClient(self.config)
