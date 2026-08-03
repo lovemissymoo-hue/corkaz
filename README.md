@@ -1,11 +1,14 @@
 # Corkaz
 
-A first-nation AI chat application built on top of the OpenAI API (or any compatible endpoint).
+AI Ngarrindjeri creation 
+
+Nothing without us about us
 
 ---
 
 ## Features
 
+- Web-based chat interface using Streamlit
 - Interactive streaming chat loop via the command line
 - Configurable model, temperature, and conversation-history window
 - Clean Python package layout ready for extension
@@ -23,6 +26,15 @@ pip install -e .          # installs the `corkaz` CLI entry-point
 ```
 
 ## Quick start
+
+### Web Interface (Streamlit)
+
+```bash
+export OPENAI_API_KEY="sk-..."
+streamlit run app.py
+```
+
+### CLI
 
 ```bash
 export OPENAI_API_KEY="sk-..."

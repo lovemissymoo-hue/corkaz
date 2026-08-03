@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  corkaz:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
