@@ -10,6 +10,7 @@ from .community import build_lead_context, get_lead, list_leads
 def _print_help() -> None:
     print(
         "Commands:\n"
+        "  help                          Show this help message\n"
         "  leads                         List available community leads\n"
         "  lead <name>                   Show lead profile\n"
         "  engage <name> <topic>         Generate engagement guidance\n"

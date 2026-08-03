@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Optional
 
 
 @dataclass(frozen=True)
@@ -63,7 +64,7 @@ def list_leads() -> tuple[CommunityLead, ...]:
     return DEFAULT_LEADS
 
 
-def get_lead(name: str) -> CommunityLead | None:
+def get_lead(name: str) -> Optional[CommunityLead]:
     """Return a lead by case-insensitive name."""
     normalized = name.strip().lower()
     for lead in DEFAULT_LEADS:
