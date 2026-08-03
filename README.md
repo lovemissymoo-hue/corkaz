@@ -1,14 +1,15 @@
 # Corkaz
 
-A first-nation AI chat application built on top of the OpenAI API (or any compatible endpoint).
+An AI app supporting Melissa and Natasha in community-lead engagement and social life planning.
 
 ---
 
 ## Features
 
 - Interactive streaming chat loop via the command line
+- Built-in lead profiles for Melissa and Natasha
+- Engagement and social-life command flows (`engage`, `social`)
 - Configurable model, temperature, and conversation-history window
-- Clean Python package layout ready for extension
 
 ## Requirements
 
@@ -33,6 +34,11 @@ Type your message and press **Enter**. Special commands:
 
 | Command | Effect |
 |---------|--------|
+| `help` | Show all commands |
+| `leads` | List built-in community leads |
+| `lead <name>` | Show a lead profile |
+| `engage <name> <topic>` | Generate engagement action guidance |
+| `social <name>` | Generate social-life support ideas |
 | `reset` | Clear conversation history |
 | `quit` / `exit` | Exit the app |
 
@@ -47,7 +53,7 @@ All settings are read from environment variables:
 | `CORKAZ_BASE_URL` | OpenAI endpoint | Override for compatible providers |
 | `CORKAZ_TEMPERATURE` | `0.7` | Sampling temperature (0.0 – 2.0) |
 | `CORKAZ_MAX_HISTORY` | `20` | Max messages kept in context |
-| `CORKAZ_SYSTEM_PROMPT` | Ngarrindjeri on-Country game guide | System instruction sent on every request |
+| `CORKAZ_SYSTEM_PROMPT` | Melissa/Natasha engagement assistant | System instruction sent on every request |
 
 ## Running tests
 
@@ -65,9 +71,11 @@ corkaz/
 │       ├── __init__.py   # package version
 │       ├── config.py     # environment-based configuration
 │       ├── ai.py         # Message, ConversationHistory, AIClient, CorkAI
+│       ├── community.py  # Melissa/Natasha profile data + prompt helpers
 │       └── cli.py        # interactive CLI entry point
 ├── tests/
 │   ├── test_config.py
+│   ├── test_community.py
 │   └── test_ai.py
 ├── pyproject.toml
 └── requirements.txt
